@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #007BFF, #00BFFF);
+}
+
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #4d4242;
+    background-color: black;
+    color: #fff;
+    position: relative;
+}
+
+.clock::before{
+    content: "";
+    width: 103%;
+    height: 103%;
+    border: 2px solid #ffffff86;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.clock::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.clock ul li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--val)));
+    inset: 5px;
+}
+
+.clock ul li span{
+    transform: rotate(calc(-30deg * var(--val)));
+    display: inline-block;
+    
+}
+
+.clock ul .dash{
+    transform: rotate(calc(6deg * var(--dis)));
+    inset: 1px;
+}
+
+.clock ul .dash span{
+    transform: rotate(-90deg);
+    display: inline-block;
+    font-size: 12px;
+    color: #6b6464;
+    font-weight: bold;
+}
+
+.nedle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nedle span{
+    width: 5px;
+    height: var(--h);
+    background-color: var(--clr);
+    position: absolute;
+    border-radius: 5px;
+}
